@@ -145,9 +145,10 @@ const Hero: React.FC = () => {
                 <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-mars-red via-mars-orange to-mars-purple blur-lg opacity-70 animate-pulse-slow"></div>
                 <div className="relative rounded-full overflow-hidden border-4 border-mars-orange/50 h-64 w-64 md:h-80 md:w-80">
                   <img 
-                    src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                    src="/me.jpg" 
                     alt="Profile" 
-                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
+                    
+                    className="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>

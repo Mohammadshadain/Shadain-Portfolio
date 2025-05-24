@@ -40,14 +40,14 @@ const Education: React.FC = () => {
       school: 'Exon Montessori Inter College',
       degree: 'Senior Secondary (Class XII)',
       period: 'March 2019 – June 2020',
-      score: 'Percentage: 66.3',
+      
       icon: <Award size={24} className="text-mars-orange" />,
     },
     {
       school: 'Exon Montessori Inter College',
       degree: 'Secondary (Class X)',
       period: 'March 2017 – June 2018',
-      score: 'Percentage: 61.4',
+     
       icon: <Award size={24} className="text-mars-orange" />,
     },
   ];
