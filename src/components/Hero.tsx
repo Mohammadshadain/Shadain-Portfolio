@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
                     LinkedIn
                   </a>
                   <a 
-                    href="https://github.com" 
+                    href="https://github.comhttps://github.com/Mohammadshadain" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-white hover:text-mars-orange transition-all duration-300 hover:scale-110 transform-gpu"

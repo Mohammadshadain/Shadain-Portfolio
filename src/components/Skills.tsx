@@ -46,7 +46,7 @@ const Skills: React.FC = () => {
     {
       name: 'Frontend Technologies',
       icon: <LayoutGrid className="text-mars-orange" size={24} />,
-      skills: ['HTML5', 'CSS3', 'Bootstrap', 'React.js'],
+      skills: ['HTML5', 'CSS3','React.js'],
     },
     {
       name: 'Backend Technologies',

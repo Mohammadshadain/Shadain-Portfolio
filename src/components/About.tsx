@@ -53,7 +53,7 @@ const About: React.FC = () => {
                 skills with creativity to build engaging digital experiences.
               </p>
               <p className="text-lg">
-                Currently pursuing a Bachelor's degree in Computer Engineering, I'm constantly exploring new 
+                Completed my Bachelor's degree in Computer Engineering, I'm constantly exploring new 
                 technologies and approaches to enhance my development skills.
               </p>
             </motion.div>
