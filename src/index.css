@@ -22,7 +22,6 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    perspective: 1000px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -58,121 +57,76 @@
     @apply absolute bottom-0 left-0 w-1/2 h-1 bg-mars-orange rounded-full;
   }
 
+  .slide-in {
+    animation: slideIn 0.5s ease-in-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   .bg-gradient-mars {
     background: linear-gradient(135deg, rgba(var(--color-mars-red), 0.95), rgba(var(--color-mars-purple), 0.9));
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease;
   }
 
   .bg-glass {
     @apply backdrop-blur-md bg-opacity-30 bg-space-black;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease;
   }
 
   .skill-pill {
     @apply px-4 py-1.5 rounded-full bg-mars-red text-white text-sm font-medium transition-all;
-    transform-style: preserve-3d;
   }
 
   .skill-pill:hover {
     @apply bg-mars-orange;
-    transform: translateZ(20px) scale(1.1);
   }
 
   .project-card {
     @apply rounded-xl overflow-hidden bg-glass border border-opacity-20 border-white transition-all duration-300;
-    transform-style: preserve-3d;
   }
 
   .project-card:hover {
     @apply border-mars-orange shadow-lg shadow-mars-red/20;
-    transform: translateZ(30px) scale(1.03);
   }
 
   .mars-button {
-    @apply px-6 py-3 rounded-full bg-mars-red text-white font-bold transition-all duration-300 hover:bg-mars-orange hover:shadow-lg hover:shadow-mars-red/30;
-    transform-style: preserve-3d;
+    @apply px-6 py-3 rounded-full bg-mars-red text-white font-bold transition-all duration-300;
   }
 
   .mars-button:hover {
-    transform: translateZ(20px) scale(1.05);
+    @apply bg-mars-orange;
   }
 
-  /* Floating animation for stones */
+  .float-animation {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .float-animation-reverse {
+    animation: float-reverse 9s ease-in-out infinite;
+  }
+
   @keyframes float {
     0%, 100% {
-      transform: translateY(0) rotate(0deg) translateZ(0);
+      transform: translateY(0);
     }
-    33% {
-      transform: translateY(-20px) rotate(5deg) translateZ(30px);
-    }
-    66% {
-      transform: translateY(10px) rotate(-3deg) translateZ(15px);
+    50% {
+      transform: translateY(-20px);
     }
   }
 
   @keyframes float-reverse {
     0%, 100% {
-      transform: translateY(0) rotate(0deg) translateZ(0);
+      transform: translateY(0);
     }
-    33% {
-      transform: translateY(20px) rotate(-5deg) translateZ(30px);
+    50% {
+      transform: translateY(20px);
     }
-    66% {
-      transform: translateY(-10px) rotate(3deg) translateZ(15px);
-    }
-  }
-
-  .float-animation {
-    animation: float 12s ease-in-out infinite;
-  }
-
-  .float-animation-reverse {
-    animation: float-reverse 14s ease-in-out infinite;
-  }
-
-  .float-animation-slow {
-    animation: float 16s ease-in-out infinite;
-  }
-
-  /* Mars dust particles */
-  .mars-dust {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 10;
-  }
-
-  /* Parallax container */
-  .parallax-container {
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-  }
-
-  /* Hover effect for cards */
-  .hover-card {
-    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
-    transform-style: preserve-3d;
-  }
-
-  .hover-card:hover {
-    transform: translateZ(30px) scale(1.05);
-  }
-
-  /* Perspective container */
-  .perspective-1000 {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-  }
-
-  /* GPU acceleration */
-  .transform-gpu {
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    will-change: transform;
   }
 }
