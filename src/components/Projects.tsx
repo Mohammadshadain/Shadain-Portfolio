@@ -33,37 +33,53 @@ const Projects: React.FC = () => {
     },
   };
 
-  const projects = [
-    {
-      title: 'Vox-Market',
-      period: 'Nov 2024 – Present',
-      description: 'A voice-enabled eCommerce platform that allows users to navigate and shop using voice commands.',
-      technologies: [
-        'Next.js', 'React', 'Node.js', 'Express.js', 'Tailwind CSS', 'React Speech Recognition'
-      ],
-      details: [
-        'Developing a voice-enabled eCommerce platform that allows users to navigate and shop using voice commands.',
-        'Responsible for implementing the frontend functionalities.',
-        'Collaborating with a team of 4 to ensure seamless integration of the React Speech Recognition library and other technologies.',
-        'Utilizing Next.js for client-side rendering and optimized performance, along with Tailwind CSS for responsive design.'
-      ],
-      image: 'https://images.pexels.com/photos/7661466/pexels-photo-7661466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    },
-    {
-      title: 'React Library Directory',
-      period: 'July 2024 – Sept 2024',
-      description: 'A web application designed to help developers easily find and explore React and JavaScript libraries.',
-      technologies: [
-        'Next.js', 'Node.js', 'Express.js', 'Axios', 'Mongoose', 'JWT'
-      ],
-      details: [
-        'The React Library Directory is a web application designed to help developers easily find and explore React and JavaScript libraries.',
-        'Built with Modern Stack: Developed using React, Axios, Node.js, Mongoose, and JWT to ensure smooth performance and secure data handling.',
-        'Developer-Friendly Interface: Designed with an intuitive and user-friendly interface, making it easy for developers to navigate and find the right libraries quickly.'
-      ],
-      image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    }
-  ];
+ const projects = [
+  {
+    title: 'Vox-Market',
+    period: 'Nov 2024 – Present',
+    description: 'A voice-enabled eCommerce platform that allows users to navigate and shop using voice commands.',
+    technologies: [
+      'Next.js', 'React', 'Node.js', 'Express.js', 'Tailwind CSS', 'React Speech Recognition'
+    ],
+    details: [
+      'Developing a voice-enabled eCommerce platform that allows users to navigate and shop using voice commands.',
+      'Responsible for implementing the frontend functionalities.',
+      'Collaborating with a team of 4 to ensure seamless integration of the React Speech Recognition library and other technologies.',
+      'Utilizing Next.js for client-side rendering and optimized performance, along with Tailwind CSS for responsive design.'
+    ],
+    image: '/ecoBazar half.png'
+  },
+  {
+    title: 'React Library Directory',
+    period: 'July 2024 – Sept 2024',
+    description: 'A web application designed to help developers easily find and explore React and JavaScript libraries.',
+    technologies: [
+      'Next.js', 'Node.js', 'Express.js', 'Axios', 'Mongoose', 'JWT'
+    ],
+    details: [
+      'The React Library Directory is a web application designed to help developers easily find and explore React and JavaScript libraries.',
+      'Built with Modern Stack: Developed using React, Axios, Node.js, Mongoose, and JWT to ensure smooth performance and secure data handling.',
+      'Developer-Friendly Interface: Designed with an intuitive and user-friendly interface, making it easy for developers to navigate and find the right libraries quickly.'
+    ],
+    image: '/reactfull.png'
+  },
+  {
+    title: 'Well Fit',
+    period: 'Jan 2024 – Mar 2024',
+    description: 'A fitness tracking web app designed to monitor workouts, nutrition, and progress over time.',
+    technologies: [
+      'React', 'Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Chart.js'
+    ],
+    details: [
+      'Built a full-stack fitness tracking app to log workouts, track progress, and visualize data with interactive charts.',
+      'Users can register, log in securely, and manage their personalized fitness routines.',
+      'Integrated Chart.js to provide dynamic progress tracking based on workout logs.',
+      'Used MongoDB for storing user data, workout plans, and progress history.'
+    ],
+    image: '/well.png'
+  }
+];
+
 
   return (
     <section id="projects" className="py-20 relative">
@@ -99,7 +115,8 @@ const Projects: React.FC = () => {
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" 
+                   className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500"
+
                   />
                 </motion.div>
 
