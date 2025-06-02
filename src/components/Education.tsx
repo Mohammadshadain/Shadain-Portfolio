@@ -85,13 +85,13 @@ const Education: React.FC = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className={`relative mb-12 flex ${isEven ? 'justify-start' : 'justify-end'} group`}
+                  className={`relative mb-12 flex flex-col items-center lg:items-stretch ${isEven ? 'lg:justify-start' : 'lg:justify-end'} lg:flex-row group`}
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   {/* Icon Dot */}
                   <motion.div
-                    className={`absolute top-0 ${isEven ? 'left-[calc(50%-42px)]' : 'right-[calc(50%-42px)]'} w-12 h-12 rounded-full bg-space-blue border-4 border-mars-orange flex items-center justify-center z-10`}
+                    className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-space-blue border-4 border-mars-orange flex items-center justify-center z-10"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: index * 0.3, type: 'spring', stiffness: 200 }}
@@ -101,7 +101,9 @@ const Education: React.FC = () => {
 
                   {/* Card */}
                   <motion.div
-                    className="max-w-md bg-space-blue/60 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-mars-orange/50 transition-all duration-300"
+                    className={`mt-16 max-w-md bg-space-blue/60 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-mars-orange/50 transition-all duration-300 ${
+                      isEven ? 'lg:mr-auto lg:ml-0' : 'lg:ml-auto lg:mr-0'
+                    }`}
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.2, type: 'spring', stiffness: 100 }}
@@ -134,17 +136,18 @@ const Education: React.FC = () => {
                       <span className="text-white/80">{item.period}</span>
                     </motion.div>
 
-                    {/* Right-aligned Score */}
-                    <motion.div
-                      className="flex justify-end"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.4 }}
-                    >
-                      <span className="inline-block bg-mars-red/60 px-3 py-1 rounded-full text-sm font-medium">
-                        {item.score}
-                      </span>
-                    </motion.div>
+                    {item.score && (
+                      <motion.div
+                        className="flex justify-end"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.4 }}
+                      >
+                        <span className="inline-block bg-mars-red/60 px-3 py-1 rounded-full text-sm font-medium">
+                          {item.score}
+                        </span>
+                      </motion.div>
+                    )}
                   </motion.div>
                 </motion.div>
               );
