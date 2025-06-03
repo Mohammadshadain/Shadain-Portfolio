@@ -118,7 +118,7 @@ const Experience: React.FC = () => {
                       transition={{ delay: 0.3 }}
                     >
                       <Calendar size={16} className="text-mars-orange" />
-                      <AnimatedText text="June 2024 - Sept 2024" className="text-white/80" />
+                      <AnimatedText text="June 2024 - Aug 2024" className="text-white/80" />
                     </motion.div>
                   </div>
                   
